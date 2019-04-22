@@ -8,6 +8,7 @@ import aboutus from '@/components/aboutus/aboutus.vue'
 import myworks from '@/components/share/myworks.vue'
 import matter from  '@/components/design/matter.vue'
 import online from  '@/components/design/online.vue'
+import vi from  '@/components/design/vi.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/online',
       name: 'online',
       component: online
+    },
+    {
+      path: '/vi',
+      name: 'vi',
+      component: vi
     },
     {
       path: '/source',

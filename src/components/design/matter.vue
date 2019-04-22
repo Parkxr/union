@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="body">
     <div class="banner">
         <img src="@/assets/design/matter/banner.jpg" alt="加载中..........">
     </div>
@@ -65,10 +65,14 @@
         padding:0;
     };
     
-    .banner img{
-        width:100%;
-
-        display:block;
+    .banner{
+         img{
+              width:100%;
+              display:block;
+              height:100%;
+         }
+         height:800px;
+         overflow: hidden;
     }
    .overall{
        

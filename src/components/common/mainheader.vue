@@ -10,7 +10,7 @@
             <li>作品分享</li>
             <li>关于我们</li> -->
             <li><router-link to="/" exact>首页</router-link></li>
-            <li><router-link to="/design">设计服务</router-link></li>
+            <li><router-link to="/vi">设计服务</router-link></li>
             <li><router-link to="/source">素材分类</router-link></li>
             <li><router-link to="/share">作品分享</router-link></li>
             <li><router-link to="/aboutus">关于我们</router-link></li>
