@@ -5,6 +5,9 @@ import design from '@/components/design/design.vue'
 import source from '@/components/source/source.vue'
 import share from '@/components/share/share.vue'
 import aboutus from '@/components/aboutus/aboutus.vue'
+import myworks from '@/components/share/myworks.vue'
+import matter from  '@/components/design/matter.vue'
+import online from  '@/components/design/online.vue'
 
 Vue.use(Router)
 
@@ -23,6 +26,16 @@ export default new Router({
       component: design
     },
     {
+      path: '/matter',
+      name: 'matter',
+      component: matter
+    },
+    {
+      path: '/online',
+      name: 'online',
+      component: online
+    },
+    {
       path: '/source',
       name: 'source',
       component: source
@@ -36,6 +49,11 @@ export default new Router({
       path: '/aboutus',
       name: 'aboutus',
       component: aboutus
+    },
+    {
+      path: '/myworks',
+      name: 'myworks',
+      component: myworks
     },
     
   ]

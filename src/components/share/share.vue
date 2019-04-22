@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="sharebanner">
-      <img src="@/assets/dog.gif" alt>
+      <img src="@/assets/share/dog.gif" alt>
     </div>
 
     <nav class="sharenav">
@@ -12,25 +12,25 @@
       </p>
 
       <div class="neirong">
-        <ul v-for="(item,index) in 45" :key="index">
-          <img src="@/assets/nav.png" alt>
-          <li class="diyi">
+        <ul v-for="(item,index) in 45" :key="index" @click="$router.push('/myworks')">
+          <img src="@/assets/share/nav.png" alt="" class="imgcontent">
+          <li class="diyi" >
             <span>大气设计海报</span>
             <span>黄色 | 平面</span>
           </li>
           <li class="dier">
-            <span>
-              <img src="@/assets/icon1.png" alt>
+            <div class="sharedata">
+              <img src="@/assets/share/icon1.png" alt>
               <span>2120</span>
-            </span>
-            <span>
-              <img src="@/assets/icon2.png" alt>
+            </div>
+            <div class="sharedata">
+              <img src="@/assets/share/icon2.png" alt>
               <span>22</span>
-            </span>
-            <span>
-              <img src="@/assets/icon3.png" alt>
+            </div>
+            <div class="sharedata">
+              <img src="@/assets/share/icon3.png" alt>
               <span>320</span>
-            </span>
+            </div>
           </li>
         </ul>
       </div>
@@ -56,7 +56,7 @@ export default {
   background: #efae1c;
 
   img {
-    margin-left: 50%;
+    margin-left: 530px;
   }
 }
 .sharenav {
@@ -82,28 +82,54 @@ export default {
     height: 2000px;
     /* background: #efe5e4;*/
     ul {
+      background:white;
+      list-style:none;
       width: 244px;
       height: 204px;
       border: 1px solid black;
       float: left;
       margin: 12px 0px 12px 13px;
-      img {
-        margin: 10px 0px 13px 10px;
+      .imgcontent {
+        // margin: 10px 0px 13px 10px;
+        display:block;
+        width:210px;
+        padding-top:10px;
+        margin:0 auto;
+        
       }
       .diyi {
         margin-left: 15px;
+        font-size:14px;
+        height:40px;
+        line-height:40px;
         span:nth-child(1) {
-          padding-right: 10px;
+          padding-right: 30px;
+          color: black;
+        }
+        span{
+          display:block;
+          float:left;
+          text-align:left;
+          color:#bbbbbb;
         }
       }
       .dier {
-        float: right;
-        padding-right: 10px;
+        height:30px;
+        margin-left:40px;
+        .sharedata{
+          float:left;
+          margin-left:15px;
+          img{
+            margin-right:5px;
+          }
+          span{
+            color:#bbbbbb;
+          }
+        }
       }
     }
   }
-  .list {
-    height: 500px;
+  .list { 
     margin-top: 82px;
     text-align: center;
     input {

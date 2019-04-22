@@ -1,8 +1,8 @@
 <template>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="@/assets/homebanner.png" width="100%"></div>
-      <div class="swiper-slide"><img src="@/assets/homebanner2.jpg" width="100%"></div>
+      <div class="swiper-slide"><img src="@/assets/home/homebanner.png" width="100%"></div>
+      <div class="swiper-slide"><img src="@/assets/home/homebanner2.jpg" width="100%"></div>
     </div>
     <!-- 如果需要分页器 -->
     <div class="swiper-pagination"></div>
@@ -22,7 +22,6 @@ export default {
     
   created() {
       this.$nextTick(() => {
-						//console.log(11111)
 						this.getbanner()
 					})
   },
@@ -41,7 +40,6 @@ export default {
     },
         autoplay:1000,
         speed:1000,
-        effect : 'fade',
         autoplay: {
           disableOnInteraction: false
         }
