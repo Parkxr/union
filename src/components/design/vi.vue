@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="HYY-vi">
        <div class="banner">
            <img src="@/assets/design/vi/banner.jpg" alt="">
        </div>
@@ -42,7 +42,8 @@
         margin:0px;
         padding:0px;
     }
-    li{
+    .HYY-vi{
+        li{
         list-style: none;
     }
     .banner{
@@ -130,4 +131,5 @@
         }
     }
 }
+    }
 </style>

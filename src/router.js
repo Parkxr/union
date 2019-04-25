@@ -9,6 +9,7 @@ import myworks from '@/components/share/myworks.vue'
 import matter from  '@/components/design/matter.vue'
 import online from  '@/components/design/online.vue'
 import vi from  '@/components/design/vi.vue'
+import ui from  '@/components/design/ui.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/vi',
       name: 'vi',
       component: vi
+    },
+    {
+      path: '/ui',
+      name: 'ui',
+      component: ui
     },
     {
       path: '/source',

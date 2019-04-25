@@ -1,5 +1,5 @@
 <template>
-<div class="body">
+<div class="HYY-body">
     <div class="banner">
         <img src="@/assets/design/matter/banner.jpg" alt="加载中..........">
     </div>
@@ -9,10 +9,16 @@
             <p class="xian">-</p>
             
             <p class="yi">一</p>
-            <img src="@/assets/design/matter/wysj1.jpg" alt="">
+            <div class="HYY-div">
+                <div class="div1 diva"></div>
+                <div class="div1 divb"></div>
+                <div class="div1 divc" ></div>
+                <div class="div1 divd"></div>
+            </div>
+            <!-- <img src="@/assets/design/matter/wysj1.jpg" alt="">
             <img src="@/assets/design/matter/wysj2.jpg" alt="">
             <img src="@/assets/design/matter/wysj3.jpg" alt="">
-            <img src="@/assets/design/matter/wysj4.jpg" alt="" class="lastpic">
+            <img src="@/assets/design/matter/wysj4.jpg" alt="" class="lastpic"> -->
         </div>
         <div class="wysjj">
             <p>一</p>
@@ -54,6 +60,7 @@
 </template>
 
 <script>
+    import animate from 'animate.css'
     export default {
   
     }
@@ -64,8 +71,8 @@
         margin:0;
         padding:0;
     };
-    
-    .banner{
+    .HYY-body{
+         .banner{
          img{
               width:100%;
               display:block;
@@ -82,7 +89,7 @@
         .wysj{
             margin-top:190px;
 
-             height:890px;
+             height:600px;
             
         h2{
 
@@ -92,9 +99,35 @@
             font-size:59px;
             width:357px;
             font-weight:normal;
-            border-bottom: 1px solid #55695d;
-            
+            border-bottom: 1px solid darkturquoise;
+            animation: twinkling 1s infinite ease-in-out 
         };
+        .animated{ 
+          -webkit-animation-duration: 1s; 
+          animation-duration: 1s; 
+          -webkit-animation-fill-mode: both; 
+          animation-fill-mode: both 
+          } 
+          @-webkit-keyframes twinkling{ 
+          0%{ 
+          opacity: 0.5; 
+          color:yellow;
+          } 
+          100%{ 
+          opacity: 1; 
+          color:darkturquoise;
+          } 
+          } 
+          @keyframes twinkling{ 
+          0%{ 
+          opacity: 0.5;
+          color:darkturquoise;
+          } 
+          100%{ 
+          color:yellow;
+          opacity: 1; 
+          } 
+    }
     
         .yi{
             height:60px;
@@ -108,21 +141,49 @@
         };
         .xian{
             width: 447px;
-            border-bottom: 1px solid #55695d;
+            border-bottom: 1px solid yellow;
             margin-left: 40px;
             color:white;
         }
-        img{
-            
+      
+        .HYY-div{
+              display: flex;
+              margin-top:50px;
+            .div1{
+            flex:1;
             float:left;
-           display:block;
-           margin-right:21px;
-           
-            width:284px;
-            height:350px;
+            display:block;
+            margin-right:20px;
+            background: url(../../assets/design/matter/wysj2.jpg) no-repeat;
+            width:280px;
+            height:280px;
+            border-radius:50%;
+            animation:run 5s linear 2s infinite; 
         }
-        .lastpic{
-            margin-right:0px;
+        .diva{
+            background: url(../../assets/design/matter/wysj1.jpg) no-repeat;
+        }
+        .divb{
+            background: url(../../assets/design/matter/wysj2.jpg) no-repeat;
+        }
+        .divc{
+            background: url(../../assets/design/matter/wysj3.jpg) no-repeat;
+        }
+        .divd{
+            background: url(../../assets/design/matter/wysj4.jpg) no-repeat;
+           
+        }
+         .div1:hover{     
+            animation-play-state:paused;     
+        }
+         @keyframes run{     
+            from{     
+                -webkit-transform:rotate(360deg);     
+            }     
+            to{     
+                -webkit-transform:rotate(0deg);     
+            }     
+        }
         }
     }
     .wysjj{
@@ -213,4 +274,5 @@
        }
        img{width:100%;}
    }
+    }
 </style>
